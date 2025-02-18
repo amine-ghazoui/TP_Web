@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //------------------------Exercice 1-----------------------------------------------------
+        function degreC(tempF){
+            let tempC = (5 / 9) * (tempF-32)
+            console.log(`Une température en Fahrenheit : ${tempF}`);
+            console.log(`cette température équivaut à ${tempC.toFixed(1)} degrés Celsius`);
+        }
+
+        //------------------------Exercice 2-----------------------------------------------------
+
+        function hjms(nbrSeconds){
+            let jours = Math.floor(nbrSeconds / (24 * 3600));
+            nbrSeconds %= 24 * 3600;
+            let heures = Math.floor(nbrSeconds / 3600);
+            nbrSeconds %= 3600;
+            let minutes = Math.floor(nbrSeconds / 60);
+            let secondes = nbrSeconds % 60;
+            
+            console.log(`Une durée en secondes : ${secondes}`);
+            console.log(`Cette durée équivaut à ${jours} jours, ${heures} heures, ${minutes} minutes, et ${secondes} secondes`);
+
+        }
+
+         //------------------------Exercice 2-bis-----------------------------------------------------
+
+         function hjms_2bis(nbrSeconds){
+            let jours = Math.floor(nbrSeconds / (24 * 3600));
+            let reste = nbrSeconds % (24 * 3600);
+            let heures = Math.floor(reste / 3600);
+            reste %= 3600;
+            let minutes = Math.floor(reste / 60);
+            let secondes = reste % 60;
+
+            let parties = [];
+
+            if(jours > 0){
+                parties.push(`${jours} jour${jours > 1 ? 's' : ''}`);
+            }
+
+            if(heures > 0){
+                parties.push(`${heures} heure${heures > 1 ? 's' : ''}`);
+            }
+
+            if(minutes > 0){
+                parties.push(`${minutes} minute${minutes > 1 ? 's' : ''}`);
+            }
+
+            if(minutes > 0){
+                parties.push(`${secondes} seconde${secondes > 1 ? 's' : ''}`);
+            }
+
+            let duree = parties.join(' ');
+
+            console.log(`Une durée en secondes : ${secondes}`);
+            console.log(`Cette durée équivaut à ${duree}`);
+
+         }
+
+         //------------------------Exercice 3-----------------------------------------------------
+
+         function troisNombres(a, b, c){
+            let tableau = [a, b, c];
+
+            tableau.sort(function(x, y) {
+                return x-y;
+            })
+            console.log("Les nombres dans l'ordre croissant sont : " + tableau.join(" "));
+         }
+
+         //------------------------Exercice 4-----------------------------------------------------
+
+         function triangle1(taille){
+            let ligne = 1; 
+            while (ligne <= taille){
+                let etoiles = "";
+                let compteur = 1;
+                while (compteur <= ligne){
+                    etoiles += "*";
+                    compteur++;
+                }
+
+                console.log(etoiles);
+                ligne++;
+            }
+         }
+
+         //------------------------Exercice 4-bis-----------------------------------------------------
+
+         function pyramide(taille){
+            for (let i = 1; i <= taille; i++){
+                let espaces = "";
+
+                for (let e = 1; e <= (taille - i); e++){
+                    espaces += " ";
+                }
+
+                let etoiles = "";
+                for (let s = 1; s <= (2 * i - 1); s++){
+                    etoiles += "*";
+                }
+
+                console.log(espaces + etoiles);
+            }
+         }
+         
+         //------------------------Exercice 5-----------------------------------------------------
+
+         function Premier(n) {
+
+            if (n < 2){
+                console.log(`${n} n'est pas un entier positif > 1`);
+                return false;
+            }
+
+            for (let i = 2; i <= Math.sqrt(n); i++){
+                if (n % i === 0) {
+                    console.log(`${n} n'est pas premier, il est divisible par ${i}`);
+                    return false;
+                }
+            }
+
+            console.log(`${n} est premier`);
+            return true;
+         }
+
+         //------------------------Exercice 6-----------------------------------------------------
+
+         function Fiboi(n) {
+
+            if (n === 0) return 0;
+            if (n === 1) return 1;
+
+            let f0 = 0;
+            let f1 = 1;
+
+            for (let i = 2; i <= n; i++) {
+                let temp = f0 + f1;
+                f0 = f1;
+                f1 = temp;
+            }
+            return f1;
+        }
+
+        //let n = 10;
+        //let resultat = Fiboi(n);
+        //console.log(`Le ${n}-ème terme de la suite de Fibonacci est : ${resultat}`);
+
+        //------------------------Exercice 7-----------------------------------------------------
+
+        function racine(A, iteration = 10){
+            if (A <= 0) {
+                console.log("A doit étre > 0");
+                return;
+            }
+
+            let un = 1; // u0
+            for (let i = 0; i < iteration; i++) {
+                un = 0.5 * (un + A / un);
+            }
+            return un;
+        }
+
+        //let A = 2;
+        //let approx = racine(A, 10); // 10 itérations
+        //console.log(`valeur approché de la racine de ${A} : ${approx}`);
+    </script>
+</head>
+<body>
+    <h1>Bonjour !!</h1>
+</body>
+</html>
