@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio Website</title>
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+  <!-- Google Fonts -->
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap"
+  />
+  <!-- Fichier CSS principal -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <a href="#home" class="logo">Ghazoui Mohamed Amine</a>
+    <!-- Menu Hamburger pour mobile -->
+    <div class="menu-toggle" id="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span> 
+      <span class="bar"></span>
+    </div>
+    <nav class="nav" id="navbar">
+      <!-- Les liens renvoient vers les sections correspondantes -->
+      <a href="#home" class="active">Home</a>
+      <a href="#about">ABOUT</a>
+      <a href="#education">Education</a>
+      <a href="#portfolio">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- SECTION HOME (fond noir) -->
+  <section id="home" class="home">
+    <div class="home-img">
+      <img src="main.jpg" alt="Photo de Amine" />
+    </div>
+    <div class="home-content">
+      <h1>Hi, It's <span>Amine</span></h1>
+      <p>📍 Student in Distributed Systems and Artificial Intelligence.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#"><i class="fa-brands fa-github"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+      <a href="#contact" class="btn">Hire me</a>
+    </div>
+  </section>
+
+  <!-- SECTION ABOUT (fond gris clair) -->
+  <section id="about" class="about">
+    <!-- Colonne 1 : Titre, Sous-titre, Photo -->
+    <div class="about-intro">
+      <h3>ABOUT</h3>
+      <h2>Let me introduce myself.</h2>
+      <img src="image.jpeg" alt="My photo" />
+    </div>
+
+    <!-- Colonne 2 : Profile -->
+    <div class="about-profile">
+      <h2>PROFILE</h2>
+      <p>
+        Student in Distributed Systems and Artificial Intelligence at ENSET Mohammedia. 
+        I am interested in AI, machine learning, and software development. Curious and motivated, 
+        I enjoy taking on technical challenges.
+      </p>
+      <h3>FULLNAME:</h3>
+      <p>GHAZOUI Mohamed Amine</p>
+      <h3>BIRTH DATE:</h3>
+      <p>Janvier 26th, 2001</p>
+      <h3>EMAIL:</h3>
+      <p>ghazouimohamedamine@gmail.com</p>
+    </div>
+
+    <!-- Colonne 3 : Skills & Languages -->
+    <div class="about-skills">
+      <h2>SKILLS</h2>
+      <h3>Langages de programmation</h3>
+      <p>Java, Python, JavaScript</p>
+      <h3>Frameworks</h3>
+      <p>Spring Boot, Angular, JavaFX</p>
+      <h3>Base de données</h3>
+      <p>MySQL</p>
+      <h3>Gestion de projets</h3>
+      <p>Méthode agile : Scrum</p>
+
+      <h2>LANGUAGES</h2>
+      <p>TAMAZIGHT</p>
+      <p>ARABE</p>
+      <p>FRANÇAIS</p>
+      <p>ANGLAIS</p>
+    </div>
+  </section>
+
+  <!-- SECTION EDUCATION (fond gris plus foncé) -->
+  <section id="education" class="education">
+    <h2>EDUCATION</h2>
+    <h3>More of my Credentials</h3>
+    <div class="education-content">
+      <div class="education-item">
+        <h4>Master's in Distributed Systems and Artificial Intelligence</h4>
+        <h5>ENSET Mohammedia | 2024 - Present</h5>
+        <p>
+          Advanced training in artificial intelligence and distributed systems.
+        </p>
+      </div>
+      <div class="education-item">
+        <h4>Bachelor's in Science and Technology - Software Engineering</h4>
+        <h5>FST Errachidia | 2023 - 2024</h5>
+        <p>
+            Specialized in software development and AI.
+        </p>
+      </div>
+      <div class="education-item">
+        <h4>High School Diploma in Physical Sciences</h4>
+        <h5>Tinghir | 2020</h5>
+        <p>Foundations in science and analytical reasoning.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION PORTFOLIO (fond gris clair) -->
+  <section id="portfolio" class="portfolio">
+    <h2>PORTFOLIO</h2>
+    <h3>Check Out Some of My Projects.</h3>
+    <p>These projects have helped me develop my skills and understand the industry better.</p>
+    <div class="portfolio-content">
+      <!-- Projet 1 -->
+      <div class="portfolio-item">
+        <div class="project-description">
+          <h4>Reconnaissance de chiffres manuscrits</h4>
+          <p>
+            Development of an automatic handwritten digit recognition system using 
+            a convolutional neural network (CNN).
+            Utilization of the MNIST dataset for training and testing the model.
+          </p>
+        </div>
+        <div class="project-image">
+          <img src="cnn.png" alt="Reconnaissance de chiffres manuscrits" />
+        </div>
+      </div>
+      <!-- Projet 2 -->
+      <div class="portfolio-item">
+        <div class="project-description">
+          <h4>Jeu Space Invaders en Java</h4>
+          <p>
+            Creation of a game inspired by Space Invaders in Java with a user interface developed using JavaFX. 
+            The game includes features such as player movement, shooting, and enemy management.
+          </p>
+        </div>
+        <div class="project-image">
+          <img src="spaceInvaders.png" alt="Jeu Space Invaders en Java" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION CONTACT (fond noir, style final) -->
+  <section id="contact" class="contact">
+    <h2>CONTACT</h2>
+    <h3>I’d Love To Hear From You.</h3>
+    <p>Feel free to Contact Me:</p>
+
+    <form class="contact-form">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input 
+          type="text" 
+          id="name" 
+          name="name" 
+          placeholder="Your Name" 
+          required 
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input 
+          type="email" 
+          id="email" 
+          name="email" 
+          placeholder="Your Email" 
+          required 
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <input 
+          type="text" 
+          id="subject" 
+          name="subject" 
+          placeholder="Subject" 
+          required 
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea 
+          id="message" 
+          name="message" 
+          placeholder="Your Message" 
+          rows="5" 
+          required
+        ></textarea>
+      </div>
+
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <!-- JavaScript pour le menu mobile et le lien actif -->
+  <script>
+    const menuToggle = document.getElementById("mobile-menu");
+    const navbar = document.getElementById("navbar");
+    const navLinks = navbar.querySelectorAll("a");
+
+    // Ouverture/fermeture du menu hamburger
+    menuToggle.addEventListener("click", () => {
+      navbar.classList.toggle("active");
+    });
+
+    // Gérer la classe "active" sur le lien cliqué
+    navLinks.forEach((link) => {
+      link.addEventListener("click", function() {
+        // Retirer la classe "active" de tous les liens
+        navLinks.forEach((l) => l.classList.remove("active"));
+        // Ajouter la classe "active" au lien cliqué
+        this.classList.add("active");
+      });
+    });
+  </script>
+</body>
+</html>
