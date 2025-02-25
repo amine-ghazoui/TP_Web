@@ -29,7 +29,7 @@ function degreC(tempF){
 **Function**:
 - Takes a number of seconds as input.
 - Calculates the equivalent days, hours, minutes, and seconds.
-- Displays the converted time.
+- Displays the converted time..
 
 ```javascript
 function hjms(nbrSeconds){
