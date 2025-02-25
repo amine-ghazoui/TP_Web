@@ -15,6 +15,7 @@
         //------------------------Exercice 2-----------------------------------------------------
 
         function hjms(nbrSeconds){
+            const totalSecondes = nbrSeconds;
             let jours = Math.floor(nbrSeconds / (24 * 3600));
             nbrSeconds %= 24 * 3600;
             let heures = Math.floor(nbrSeconds / 3600);
@@ -22,7 +23,7 @@
             let minutes = Math.floor(nbrSeconds / 60);
             let secondes = nbrSeconds % 60;
             
-            console.log(`Une durée en secondes : ${secondes}`);
+            console.log(`Une durée en secondes : ${totalSecondes}`);
             console.log(`Cette durée équivaut à ${jours} jours, ${heures} heures, ${minutes} minutes, et ${secondes} secondes`);
 
         }

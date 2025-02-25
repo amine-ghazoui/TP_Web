@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div > input{
+            margin-bottom: 8px;
+        }
+        div div input{
+            padding-right: 15px;
+        }
+    </style>
+    <script>
+
+        function adition(){
+            var number1 = Number(document.getElementById("nbr1").value);
+            var number2 = Number(document.getElementById("nbr2").value);
+
+            document.getElementById("rslt").value = number1 + number2
+
+        }
+        function soustraction(){
+            var number1 = Number(document.getElementById("nbr1").value);
+            var number2 = Number(document.getElementById("nbr2").value);
+
+            document.getElementById("rslt").value = number1 - number2
+        }
+        function multiplication(){
+            var number1 = Number(document.getElementById("nbr1").value);
+            var number2 = Number(document.getElementById("nbr2").value);
+
+            document.getElementById("rslt").value = number1 * number2;
+        }
+        function division(){
+            var number1 = Number(document.getElementById("nbr1").value);
+            var number2 = Number(document.getElementById("nbr2").value);
+
+            document.getElementById("rslt").value = number1 / number2;
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <input type="number" name="nombre1" id="nbr1"><br>
+        <input type="number" name="nombre2" id="nbr2"><br>
+        <div class="btn_content">
+            <input type="button" name="adition" id="plus" value="+" onclick="adition()">
+            <input type="button" name="soustra" id="moin" value="-" onclick="soustraction()">
+            <input type="button" name="multiplication" id="mltpc" value="*" onclick="multiplication()">
+            <input type="button" name="division" id="dvs" value="/" onclick="division()">
+        </div>
+        <input type="number" name="resultat" id="rslt">
+    </div>
+</body>
+</html>

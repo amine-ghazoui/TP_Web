@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .info{
+            margin-left: 60px;
+        }
+        .btn input{
+            padding: 5px;
+            margin: 2px;
+            background-color: burlywood;
+        }
+
+    </style>
+    <script>
+        function calculIMC(){
+            var poids = parseFloat(document.getElementById("poid").value);
+            var taille = parseFloat(document.getElementById("taille").value);
+
+            if (isNaN(poids) || isNaN(taille) || taille <= 0) {
+                document.getElementById('result').textContent = "Veuillez entrer des valeurs valides.";
+                return;
+            }
+
+            var imc = poids / (taille * taille);
+            imc = imc.toFixed(2);
+
+            var categorie = "";
+            if (imc < 18.5) {
+                categorie = "Maigreur";
+            } 
+            else if (imc < 25) {
+                categorie = "Corpulence normale";
+            } 
+            else if (imc < 30) {
+                categorie = "Surpoids";
+            } 
+            else if (imc < 35) {
+                categorie = "Obésité modérée (Classe 1)";
+            } 
+            else if (imc < 40) {
+                categorie = "Obésité sévère (Classe 2)";
+            } 
+            else {
+                categorie = "Obésité morbide ou massive (Classe 3)";
+            }
+
+            document.getElementById('result').textContent =
+            "Votre IMC est de " + imc + ". Vous êtes dans la catégorie : " + categorie + ".";
+        }
+    </script>
+</head>
+<body>
+    <div class="content">
+        <h1>Calculateur d'IMC</h1>
+        <div class="info">
+            <label for="poid">Poids(kg) : </label>
+            <input type="number" name="poid" id="poid"><br><br>
+            <label for="taille">Taille (m) : </label>
+            <input type="number" name="taille" id="taille">
+        </div><br>
+        <div class="btn">
+            <input type="button" name="" id="" value="Calculer" onclick="calculIMC()">
+        </div>
+        <div class="result" id="result"></div>
+
+    </div>
+</body>
+</html>
