@@ -23,7 +23,6 @@
 
             if (isNaN(poids) || isNaN(taille) || taille <= 0) {
                 document.getElementById('result').textContent = "Veuillez entrer des valeurs valides.";
-                return;
             }
 
             var imc = poids / (taille * taille);
